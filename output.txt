@@ -1,0 +1,137 @@
+root
+ |-- userId: integer (nullable = true)
+ |-- movieId: integer (nullable = true)
+ |-- rating: float (nullable = true)
+ |-- timestamp: string (nullable = true)
+
++------+-------+------+----------+
+|userId|movieId|rating| timestamp|
++------+-------+------+----------+
+|     1|     31|   2.5|1260759144|
+|     1|   1029|   3.0|1260759179|
+|     1|   1061|   3.0|1260759182|
+|     1|   1129|   2.0|1260759185|
+|     1|   1172|   4.0|1260759205|
++------+-------+------+----------+
+only showing top 5 rows
+
+root
+ |-- movieId: integer (nullable = true)
+ |-- title: string (nullable = true)
+ |-- genres: string (nullable = true)
+
++-------+--------------------+--------------------+
+|movieId|               title|              genres|
++-------+--------------------+--------------------+
+|      1|    Toy Story (1995)|Adventure|Animati...|
+|      2|      Jumanji (1995)|Adventure|Childre...|
+|      3|Grumpier Old Men ...|      Comedy|Romance|
+|      4|Waiting to Exhale...|Comedy|Drama|Romance|
+|      5|Father of the Bri...|              Comedy|
++-------+--------------------+--------------------+
+only showing top 5 rows
+
+Number of ratings: 100004
+Number of distinct users: 671
+Number of distinct movies: 9066
++-----------------+-----------+-----------+-------------------+
+|      avg(rating)|min(rating)|max(rating)|stddev_samp(rating)|
++-----------------+-----------+-----------+-------------------+
+|3.543608255669773|        0.5|        5.0| 1.0580641091070326|
++-----------------+-----------+-----------+-------------------+
+
++------+-----+
+|rating|count|
++------+-----+
+|   0.5| 1101|
+|   1.0| 3326|
+|   1.5| 1687|
+|   2.0| 7271|
+|   2.5| 4449|
+|   3.0|20064|
+|   3.5|10538|
+|   4.0|28750|
+|   4.5| 7723|
+|   5.0|15095|
++------+-----+
+
+For rank 2, regParams 0.01, the RMSE is 1.03153158849
+For rank 4, regParams 0.01, the RMSE is 1.1106769261
+For rank 8, regParams 0.01, the RMSE is 1.22156636168
+For rank 12, regParams 0.01, the RMSE is 1.30301752091
+For rank 16, regParams 0.01, the RMSE is 1.34038879145
+For rank 20, regParams 0.01, the RMSE is 1.36867623935
+For rank 24, regParams 0.01, the RMSE is 1.3964271066
+For rank 2, regParams 0.05, the RMSE is 0.969612344535
+For rank 4, regParams 0.05, the RMSE is 0.994690520889
+For rank 8, regParams 0.05, the RMSE is 1.03391732058
+For rank 12, regParams 0.05, the RMSE is 1.05468292515
+For rank 16, regParams 0.05, the RMSE is 1.04826527298
+For rank 20, regParams 0.05, the RMSE is 1.04998009767
+For rank 24, regParams 0.05, the RMSE is 1.05601495976
+For rank 2, regParams 0.1, the RMSE is 0.945134847557
+For rank 4, regParams 0.1, the RMSE is 0.945914517266
+For rank 8, regParams 0.1, the RMSE is 0.953375330173
+For rank 12, regParams 0.1, the RMSE is 0.955152351799
+For rank 16, regParams 0.1, the RMSE is 0.951090589778
+For rank 20, regParams 0.1, the RMSE is 0.950391516938
+For rank 24, regParams 0.1, the RMSE is 0.949310878227
+For rank 2, regParams 0.15, the RMSE is 0.936034703366
+For rank 4, regParams 0.15, the RMSE is 0.928137351826
+For rank 8, regParams 0.15, the RMSE is 0.929514450514
+For rank 12, regParams 0.15, the RMSE is 0.929104250755
+For rank 16, regParams 0.15, the RMSE is 0.928793535233
+For rank 20, regParams 0.15, the RMSE is 0.928124948787
+For rank 24, regParams 0.15, the RMSE is 0.927387237162
+For rank 2, regParams 0.2, the RMSE is 0.937451183333
+For rank 4, regParams 0.2, the RMSE is 0.926574179644
+For rank 8, regParams 0.2, the RMSE is 0.926843942719
+For rank 12, regParams 0.2, the RMSE is 0.927206927987
+For rank 16, regParams 0.2, the RMSE is 0.927706334629
+For rank 20, regParams 0.2, the RMSE is 0.927084393644
+For rank 24, regParams 0.2, the RMSE is 0.927102385089
+For rank 2, regParams 0.3, the RMSE is 0.956934314477
+For rank 4, regParams 0.3, the RMSE is 0.949138340378
+For rank 8, regParams 0.3, the RMSE is 0.949343652528
+For rank 12, regParams 0.3, the RMSE is 0.950469386335
+For rank 16, regParams 0.3, the RMSE is 0.950623155004
+For rank 20, regParams 0.3, the RMSE is 0.950144581068
+For rank 24, regParams 0.3, the RMSE is 0.950789999948
+Best Rank = 4, Best regParam = 0.2, with RMSE = 0.926574179644
+The model had a RMSE of 0.92277622142 on test dataset
+Number of ratings: 24404096
+Number of distinct users: 259137
+Number of rated distinct movies: 39443
+Total number of movies: 40110
++------------------+-----------+-----------+-------------------+
+|       avg(rating)|min(rating)|max(rating)|stddev_samp(rating)|
++------------------+-----------+-----------+-------------------+
+|3.5265681220070597|        0.5|        5.0| 1.0642182955183346|
++------------------+-----------+-----------+-------------------+
+
+Distribution of ratings:
++------+-------+
+|rating|  count|
++------+-------+
+|   0.5| 361006|
+|   1.0| 807991|
+|   1.5| 369879|
+|   2.0|1681993|
+|   2.5|1145168|
+|   3.0|5011914|
+|   3.5|2840765|
+|   4.0|6620340|
+|   4.5|1984982|
+|   5.0|3580058|
++------+-------+
+
+Average number of ratings per movie: 618.71804883
+Training full data set with Rank = 4, regParam = 0.2 ...
+Final model trained in 151.1 seconds
+The final model had a RMSE of 1.0618307465
+User 1000 has watched and rated 49 moive (sorted by rating):
+Traceback (most recent call last):
+  File "/home/hadoop/COMP4651_Movie_Recommendation_Model/movie_exported.py", line 188, in <module>
+    userWatchedList.orderBy('rating', ascending = False).show(20, False)
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 320, in show
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xb7' in position 848: ordinal not in range(128)
